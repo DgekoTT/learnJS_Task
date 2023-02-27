@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let val = {};
+
+            function A() { return val; }
+            function B() { return val; }
+
+            alert( new A() == new B() ); // true
+        </script>
+    </body>
+</html>

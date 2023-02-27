@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function sumInput() {
+                let arr = [];
+
+                while(true) {
+                    let value = prompt('Введите первое число');
+                    if (value === null || value ==='' || isNaN(value)) {
+                        break;
+                    }
+                    arr.push(+value);
+                }
+
+                let result = arr.reduce((sum, elem) => { return sum + elem;}, 0)
+
+                return result;
+            }
+        </script>
+    </body>
+</html>

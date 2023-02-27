@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function isEmpty(objForCheck) {
+                let flag = true;
+
+                for (i in objForCheck) {
+                    if ( i != undefined ) {
+                        flag = false;
+                    }
+                }
+
+                return flag;
+            }
+
+            let schedule = {};
+
+            alert( isEmpty(schedule) ); // true
+
+            schedule["8:30"] = "get up";
+
+            alert( isEmpty(schedule) ); // false
+        </script>
+    </body>
+</html>

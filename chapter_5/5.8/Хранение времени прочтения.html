@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let messages = [
+                {text: "Hello", from: "John"},
+                {text: "How goes?", from: "John"},
+                {text: "See you soon", from: "Alice"}
+            ];
+
+            let readTime = new WeakMap();
+
+            readTime.set(messages[0], new Date(2023, 10, 10));
+        </script>
+    </body>
+</html>

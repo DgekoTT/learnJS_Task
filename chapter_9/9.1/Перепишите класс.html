@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            class Clock {
+                constructor ({time}) {
+                    this.time = time
+                }
+
+                getTime = () => {
+                    let d = new Date ();
+
+                    let sec = d.getSeconds();
+                    if (sec < 10) sec = '0' + sec;
+
+                    let min = d.getMinutes();
+                    if (min < 10) min = '0' + min;
+
+                    let hour = d.getHours()
+                    if (hour < 10) hour = '0' + hour;
+
+                    let fullTime = this.time
+                        .replace('s', secs)
+                        .replace('m', min)
+                        .replace('h', hour);
+                    
+                    console.log(fullTime);
+                }
+
+                stop = () => {
+                    clearInterval(this.timer)
+                }
+
+                start = () => {
+                    this.getTime();
+                    this.timer = setInterval(() => this.getTime(), 1000);
+                }
+            }
+        </script>
+    </body>
+</html>

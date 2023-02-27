@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function readNumber() {
+                let num;
+
+                do {
+                    num = prompt('Введите первое число');
+
+                    if (num === null || num ==="") {
+                        return null;
+                    }
+
+                } while(!Number.isFinite(+num))
+
+               return +num;
+            }
+        </script>
+    </body>
+</html>

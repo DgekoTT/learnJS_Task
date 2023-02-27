@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function getMaxSubSum(arr) {
+                let maxSum = 0;
+                let operateSum = 0;
+
+                for (let i of arr) {
+                    operateSum += i;
+                    maxSum = Math.max(maxSum, operateSum);
+                    if (operateSum < 0) operateSum = 0;
+                }
+
+                return maxSum;
+            }
+        </script>
+    </body>
+</html>

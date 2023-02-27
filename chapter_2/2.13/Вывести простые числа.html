@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let number =  prompt('Введите конец диапозона', 0);
+            next:
+            for (let i = 2; i < number; i ++) {
+                for ( let k = 2; k < i; k++) {
+                    if ( i % k == 0) continue next;
+                }
+                alert(i);
+            }
+        </script>
+    </body>
+</html>

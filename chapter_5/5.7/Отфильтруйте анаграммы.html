@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function aclean(arr) {
+                let result = new Map;
+
+                for (word of arr) {
+                    let sortedStr = word.toLowerCase().split('').sort().join('');
+                    result.set(sortedStr, word);
+                }
+
+                return Array.from(result.values);
+            }
+
+        </script>
+    </body>
+</html>

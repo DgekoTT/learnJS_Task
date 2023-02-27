@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function Calculator () {
+                this.procedure = {
+                    '-': (a, b) => a - b,
+                    '+': (a, b) => a +b,
+                }
+
+                this.calculate = (str) => {
+                    let values = str.split(' ');
+                    
+                    let a = +values[0];
+                    let singth = values[1];
+                    let b = +values[2];
+
+                    if ( isNaN(a) || isNaN(b) || !this.procedure[singth]) {
+                        return NaN;
+                    }
+
+                    return this.procedure[singth](a, b);
+                }
+
+                this.addMethod = (name, func) => {
+                    this.procedure[name] = func;
+                }
+            }
+
+        </script>
+    </body>
+</html>

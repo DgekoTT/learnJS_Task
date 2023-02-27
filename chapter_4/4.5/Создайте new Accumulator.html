@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function Accumulator(startingValue) {
+
+                this.value = startingValue;
+
+                this.read = () => {
+                    this.value += +prompt('Введите первое число', 0);
+                }
+            }
+        </script>
+    </body>
+</html>
