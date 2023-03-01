@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function printNumbersInteral(from, to) {
+            let start = from;
+
+            function print() {
+                alert(start);
+                start++;
+                if (start == to) {
+                    clearInterval(time);
+                }
+            }
+            
+            let time = setInterval(print, 1000, start);
+            
+            
+        }
+
+        function printNumbers(from, to) {
+            let start = from;
+
+            setTimeout(function next() {
+                alert(start);
+                if (start < to) {
+                    setTimeout(next, 1000);
+                }
+                start++;
+            }, 1000);      
+        }
+
+        printNumbers(1,5)
+    </script>
+</body>
+</html>
