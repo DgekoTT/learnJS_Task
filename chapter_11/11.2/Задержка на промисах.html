@@ -8,18 +8,11 @@
 </head>
 <body>
     <script>
-        let animal = {
-            eat() {
-                this.full = true;
-            }
-        };
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms))
+        }
 
-        let rabbit = {
-            __proto__: animal
-        };
-
-        rabbit.eat();
-        // rabbit
+        delay(3000).then(() => alert('выполнилось через 3 секунды'));
     </script>
 </body>
 </html>

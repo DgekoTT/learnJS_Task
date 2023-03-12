@@ -8,18 +8,11 @@
 </head>
 <body>
     <script>
-        let animal = {
-            eat() {
-                this.full = true;
-            }
-        };
-
-        let rabbit = {
-            __proto__: animal
-        };
-
-        rabbit.eat();
-        // rabbit
+        Function.prototype.defer = function (ms) {
+            return (...args) => {
+                setTimeout (this, ms, ...args)
+            };
+        }
     </script>
 </body>
 </html>

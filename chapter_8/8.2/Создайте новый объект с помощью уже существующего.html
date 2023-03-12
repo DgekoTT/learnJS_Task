@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Item (name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        let bag = new Item('red', 100);
+
+        let tshort = bag.constructor('black', 30);
+
+        alert(bag, tshort);
+
+        /*  если я изменю протоип  функции Item2 и не укажу заново
+        свойство constructorб то уже ничего не получится */
+
+        function Item2 (name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        Item2.prototype = {};
+
+        let bag2 = new Item('red', 100);
+
+        
+        let tshort2 = bag.constructor('black', 30);
+
+        alert(bag, tshort);
+    </script>
+</body>
+</html>

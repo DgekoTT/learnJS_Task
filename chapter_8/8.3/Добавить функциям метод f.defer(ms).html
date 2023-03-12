@@ -8,18 +8,10 @@
 </head>
 <body>
     <script>
-        let animal = {
-            eat() {
-                this.full = true;
-            }
-        };
+        Function.prototype.defer = function (time) {
+            setTimeout(this, time);
+        }
 
-        let rabbit = {
-            __proto__: animal
-        };
-
-        rabbit.eat();
-        // rabbit
     </script>
 </body>
 </html>

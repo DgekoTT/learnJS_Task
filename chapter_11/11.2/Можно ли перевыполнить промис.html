@@ -8,18 +8,14 @@
 </head>
 <body>
     <script>
-        let animal = {
-            eat() {
-                this.full = true;
-            }
-        };
+        // считает только первый вызов resolve, получим 1
+        let promise = new Promise(function(resolve, reject) {
+            resolve(1);
 
-        let rabbit = {
-            __proto__: animal
-        };
+            setTimeout(() => resolve(2), 1000);
+        });
 
-        rabbit.eat();
-        // rabbit
+        promise.then(alert);
     </script>
 </body>
 </html>
